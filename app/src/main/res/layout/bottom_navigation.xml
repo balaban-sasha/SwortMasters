@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/bottom_nav"
+    android:gravity="bottom"
+    tools:context="ru.saoworld.sm.swortmasters.bin.custom.NavigationEvents">
+
+    <TabWidget
+        android:id="@android:id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:weightSum="1"
+        android:background="@android:color/holo_blue_dark">
+
+        <Button
+            android:text="Chat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chatButton"
+            android:onClick="chatButtonRequest" />
+
+        <Button
+            android:text="Main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/mainButton"
+            android:layout_weight="1"
+            android:onClick="mainButtonRequest" />
+
+        <Button
+            android:text="Hero"
+            android:layout_height="wrap_content"
+            android:id="@+id/heroButton"
+            android:layout_width="wrap_content"
+            android:onClick="heroButtonRequest" />
+
+        <!--<Button
+            android:text="Messages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/messagesButton"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:onClick="messageButtonRequest" />!-->
+    </TabWidget>
+</LinearLayout>

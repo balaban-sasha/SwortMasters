@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_duel_window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.saoworld.sm.swortmasters.bin.subsidiary.duel.DuelWindow">
+
+    <include
+        android:layout_width="fill_parent"
+        layout="@layout/bottom_navigation"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/bottom_nav"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" /><include
+    android:layout_width="fill_parent"
+    layout="@layout/bottom_navigation"
+    android:layout_height="wrap_content"
+    android:visibility="visible"
+    android:id="@+id/bottom_nav"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/heroName" />
+
+    <ImageView
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="58dp"
+        android:id="@+id/userAvatar"
+        android:layout_below="@+id/heroName"
+        android:layout_alignParentStart="true"
+        android:layout_width="100dp"
+        android:layout_height="120dp" />
+
+    <TextView
+        android:id="@+id/strengthText"
+        android:layout_below="@+id/agilityText"
+        android:layout_alignStart="@+id/agilityText"
+        android:textAlignment="center"
+        android:layout_height="60px"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/staminaText"
+        android:layout_below="@+id/characteristicsText"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/agilityText"
+        android:layout_below="@+id/staminaText"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:text="Characteristics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/characteristicsText"
+        android:layout_marginStart="17dp"
+        android:layout_alignTop="@+id/userAvatar"
+        android:layout_toEndOf="@+id/userAvatar" />
+
+    <Button
+        android:text="Duel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/findOtherEnemy"
+        android:layout_toEndOf="@+id/strengthText"
+        android:id="@+id/fightEnemy"
+        android:onClick="fightRequest" />
+
+    <Button
+        android:text="Find"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/findOtherEnemy"
+        android:layout_below="@+id/userAvatar"
+        android:layout_toStartOf="@+id/fightEnemy"
+        android:layout_marginEnd="25dp"
+        android:layout_marginTop="46dp"
+        android:onClick="findRequest" />
+
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/fightEnemy"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/bottom_nav">
+
+        <TextView
+            android:id="@+id/battleResult"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:layout_above="@+id/bottom_nav"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/fightEnemy" />
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/userAvatar"
+        android:layout_alignStart="@+id/userAvatar"
+        android:layout_marginTop="13dp"
+        android:id="@+id/totalStats" />
+
+</RelativeLayout>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_hero_main_window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.saoworld.sm.swortmasters.bin.hero.HeroMainWindow">
+
+    <include
+        android:layout_width="fill_parent"
+        layout="@layout/bottom_navigation"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/bottom_nav"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/heroName" />
+
+    <ImageView
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="58dp"
+        android:id="@+id/userAvatar"
+        android:layout_below="@+id/heroName"
+        android:layout_alignParentStart="true"
+        android:layout_width="100dp"
+        android:layout_height="120dp" />
+
+    <TextView
+        android:text="Characteristics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/userAvatar"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/characteristicsText" />
+
+    <TextView
+        android:id="@+id/strengthText"
+        android:layout_below="@+id/agilityText"
+        android:layout_alignStart="@+id/agilityText"
+        android:textAlignment="center"
+        android:layout_height="60px"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/staminaText"
+        android:layout_below="@+id/characteristicsText"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/agilityText"
+        android:layout_below="@+id/staminaText"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:text="Questions"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/questsButton"
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/skillsButton"
+        android:layout_alignStart="@+id/skillsButton"
+        android:visibility="invisible" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/stat_notify_more"
+        android:layout_marginStart="41dp"
+        android:id="@+id/staminaAddButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_above="@+id/agilityText"
+        android:layout_toEndOf="@+id/characteristicsText"
+        android:onClick="addStaminaPoint" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/stat_notify_more"
+        android:id="@+id/strengthAddButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignTop="@+id/strengthText"
+        android:layout_alignStart="@+id/agilityAddButton"
+        android:onClick="addStrengthPoint" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:clickable="true"
+        app:fabSize="mini"
+        app:srcCompat="@android:drawable/stat_notify_more"
+        android:id="@+id/agilityAddButton"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignBottom="@+id/agilityText"
+        android:layout_alignStart="@+id/staminaAddButton"
+        android:onClick="addAgilityPoint" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/staminaAddButton"
+        android:layout_toEndOf="@+id/characteristicsText"
+        android:layout_marginStart="21dp"
+        android:id="@+id/numOfCharacketeristics" />
+
+    <Button
+        android:text="Skills"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/skillsButton"
+        android:layout_marginTop="91dp"
+        android:layout_below="@+id/userAvatar"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hpText"
+        android:layout_above="@+id/skillsButton"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hpText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/copperText" />
+
+    <Button
+        android:text="Items"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:id="@+id/itemsButton"
+        android:onClick="heroInventoryRequest"
+        android:layout_below="@+id/skillsButton"
+        android:layout_alignStart="@+id/questsButton" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/copperText"
+        android:layout_alignStart="@+id/userAvatar"
+        android:layout_marginTop="18dp"
+        android:id="@+id/totalStats" />
+
+</RelativeLayout>

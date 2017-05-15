@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/single_item">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemNameText"
+        android:layout_weight="1"
+        android:layout_alignBaseline="@+id/itemDescriptionText"
+        android:layout_alignBottom="@+id/itemDescriptionText"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemCharacteristicText"
+        android:layout_weight="0.84"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/itemNameText"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Buy"
+        android:layout_marginTop="25dp"
+        android:id="@+id/itemBuyRequest"
+        android:layout_height="40dp"
+        android:layout_width="200dp"
+        android:layout_below="@+id/itemCharacteristicText"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="114dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/itemDescriptionText"
+        android:layout_weight="1"
+        android:layout_marginTop="14dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

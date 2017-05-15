@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shop_window"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="ru.saoworld.sm.swortmasters.bin.subsidiary.shop.ShopWindow">
+    <include android:layout_width="fill_parent" layout="@layout/bottom_navigation"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:id="@+id/bottom_nav"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Shop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/recyclerView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="139dp"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/textView"
+        android:textSize="24sp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true"
+        android:id="@+id/itemList" />
+
+</RelativeLayout>
